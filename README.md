@@ -39,3 +39,7 @@ Depending on the above, the max amount of slots and the starting time of all slo
 
 Rails version: 6.1.4.1
 Ruby version: ruby 3.0.1
+
+#Clone the repository:
+git clone https://github.com/IrinaOvdii/meetio.git
+cd meetio
