@@ -22,6 +22,8 @@ Depending on the above, the max amount of slots and the starting time of all slo
 
 ## Revision required
 
+- revise create booking method
+
 - it may be necessary to send along with all free rooms a separate field showing the number of free slots per room
 
 - or send all (not only free) rooms, but for each room display a field with the number of free slots. So on the front-end they will be able to show all the rooms but "disable" the occupied ones.
@@ -32,7 +34,7 @@ Depending on the above, the max amount of slots and the starting time of all slo
 
 - a part responsible for user authentication should also be added
 
-- add several tests, for example, to check the uniqueness of the booking of one room at one time and start_time < end_time
+- add tests
 
 
 ## Development

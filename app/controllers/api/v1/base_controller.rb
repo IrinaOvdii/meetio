@@ -16,9 +16,4 @@ class Api::V1::BaseController < ApplicationController
     true
   end
 
-  def api_obj(obj, full=true, class_name=nil)
-    return eval("api_serialize_#{(class_name || obj.class.name).underscore}(obj, #{full})") if respond_to?("api_serialize_#{(class_name || obj.class.name).underscore}", true)
-    obj
-  end
-
 end

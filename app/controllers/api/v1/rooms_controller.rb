@@ -20,8 +20,11 @@ class Api::V1::RoomsController < Api::V1::BaseController
   end
 
   def room_availability
+    return render_error('Date is not provided.', '', 400) unless params[:date]
+    return render_error('room_id is not provided.', '', 400) unless params[:room_id]
+
     day = params[:date].to_date
-    room_id = params[:room_id].to_i
+    room_id = params[:room_id]
     room = Room.find_by_id(params[:room_id].to_i)
 
     if room
@@ -35,7 +38,7 @@ class Api::V1::RoomsController < Api::V1::BaseController
 
       render_success result
     else
-      render_error "Room was not found."
+      render_error('Room was not found.', '', 400)
     end
 
   end
